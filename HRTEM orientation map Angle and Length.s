@@ -101,12 +101,14 @@ ShowImage(outmap)
 ImageDisplay ImgDisp = outmap.ImageGetImageDisplay( 0 )
 // Change color display - Rainbow is a GMS default, but not the best colormap for this
 // Additional colormaps based on matplotlib cmaps have been installed on nmRC GMS systems
-ImageDisplaySetColorTableByName(ImgDisp, "twilight_shifted")
+// e.g. we might use twilight_shifted for this map
+ImageDisplaySetColorTableByName(ImgDisp, "Rainbow")
 ShowImage(lenmap)
 ImageDisplay ImgDispL = lenmap.ImageGetImageDisplay( 0 )
 // Change color display - Rainbow is a GMS default, but not the best colormap for this
 // Additional colormaps based on matplotlib cmaps have been installed on nmRC GMS systems
-ImageDisplaySetColorTableByName(ImgDispL, "Viridis")
+// e.g. we might use viridas for this map
+ImageDisplaySetColorTableByName(ImgDispL, "Rainbow")
 
 Result("\n Starting loop \n ")
 

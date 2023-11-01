@@ -14,4 +14,4 @@ Descriptions:
 HRTEM Orientation Map Angle and length - uses a filtered FFT to identify and map orientations via peak intensity
 Viridis.dm3 and twilight_shifted.dm3 are colormaps derived from the Matplotlib colormaps of the same names that can be installed into GMS and used with this script. 
 
-AutoFocus_insity - tested on OneView and K3 in-situ cameras. Automated focus change and report, user needs to activate in-situ acquisition in advance of running script as that functionality isn't included in the dm script language as yet (as far as I'm aware)
+AutoFocus_insitu - tested on OneView and K3 in-situ cameras. Automated focus change and report, user needs to activate in-situ acquisition in advance of running script as that functionality isn't included in the dm script language as yet (as far as I'm aware)

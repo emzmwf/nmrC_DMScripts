@@ -68,12 +68,13 @@ number BVal = EMGetBrightness()
 string tstring = ""
 number s = 65535	//default value, fully spread
 
-number BrightChange = 5000	//default value, would probably give five or six images at a normal setting for 50k, use 2500 step for 10k
+number BrightChange = 2000	//default value, 
 GetNumber("Amount of raw units to change per step", BrightChange, BrightChange )
 
 
 /////////////////////////
-// for loop to run acquisition
+// for loop to run acquisition - currently equal steps, but brightness changes more significant at higher intensities
+// - todo, test varying step for each iteration, e.g. 1.1 of previous step
 /////////////////////////
 for (s = BVal ; s<=65535 ; s = s+BrightChange)
 {
@@ -89,6 +90,8 @@ for (s = BVal ; s<=65535 ; s = s+BrightChange)
  	//Get mean from image
 	number immean = mean(IMG)
 	Result("\n"+imname+": "+immean)	
+ 	if immean<2:
+  		break#End loop early if counts are too low
 	
 }
 

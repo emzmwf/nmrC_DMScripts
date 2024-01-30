@@ -91,7 +91,7 @@ for (s = BVal ; s<=65535 ; s = s+BrightChange)
 	number immean = mean(IMG)
 	Result("\n"+imname+": "+immean)	
  	if (immean<=2)
-  		break#End loop early if counts are too low
+  		break//End loop early if counts are too low
 	
 }
 

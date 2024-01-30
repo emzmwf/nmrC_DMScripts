@@ -103,9 +103,9 @@ string end = "Brightness Series:\n"
 end += "Acquisiton complete."
 
 //To do - plot brightness vs intensity for images
-//To do - get exposure time and calibration gain factor from tags
-//To do - save brightness and intensity values to two column text
-//To do - with exposure time and calibration gain factor used
+//To do - automatically export into file:
+//To do - brightness and intensity values as two column text
+//To do - with exposure time and calibration gain factor used (will use ## tag format)
 
 
 if ( !OKCancelDialog( end ) )

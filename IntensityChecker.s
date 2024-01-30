@@ -6,11 +6,8 @@ to calculate camera intensity
 Start with vacuum, intensity that is high but not saturating
 
 //MWF 22 May 2023 initial script
-
-ToDo list - get mean and standard deviation from each image as they are displayed - DONE
-			create array of brightness and mean, create plot
-			Also get exposure time and calibration gain factor
-			and save as two column text format
+Script tested on Gatan OneView on JEOL 2100Plus
+Gatan K3-IS on JEOL 2100F
 */
 
 //Camera variables
@@ -75,8 +72,8 @@ number BrightChange = 5000	//default value, would probably give five or six imag
 GetNumber("Amount of raw units to change per step", BrightChange, BrightChange )
 
 
-/////////////////////
-// for loop here once testing is done
+/////////////////////////
+// for loop to run acquisition
 /////////////////////////
 for (s = BVal ; s<=65535 ; s = s+BrightChange)
 {
@@ -89,10 +86,9 @@ for (s = BVal ; s<=65535 ; s = s+BrightChange)
 	IMG := CameraAcquire( camID, exposure, xBin, yBin, processing )
 	setName (IMG, imname)
 	ShowImage(IMG)
+ 	//Get mean from image
 	number immean = mean(IMG)
 	Result("\n"+imname+": "+immean)	
-	
-	// To do - get mean intensity, save to array
 	
 }
 
@@ -100,7 +96,8 @@ for (s = BVal ; s<=65535 ; s = s+BrightChange)
 EMSetBeamBlanked(ON)
 
 string end = "Brightness Series:\n"
-end += "Acquisiton complete."
+end += "Acquisiton complete.\n"
+end += "Beam has been blanked."
 
 //To do - plot brightness vs intensity for images
 //To do - automatically export into file:

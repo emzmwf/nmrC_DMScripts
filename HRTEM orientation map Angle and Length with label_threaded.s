@@ -4,6 +4,9 @@ MWF November 2023
 Resize angle map after calculation
 Added orientation indicator in bottom right of angle map
 
+To use colortables, add to the Gatan colortables folder
+Usually found at 
+C:\Users\<username>\AppData\Local\Gatan\ColorTables
 */ 
 
 

@@ -1,18 +1,19 @@
 
 //////////////////////////////////////////////
-// 80kV and 200kV operation
-// After the rebuild
+// 80kV, 100kV and 200kV operation
 // March 2024
 //	July2024 - tidy script
 //
 // Settings based on alignment files:
-//	80kV:	2024-04-15 80kV MWF
+//  80kV:	2024-04-15 80kV MWF
 //  200kV: 2024-07-04_200kV_JEOL
 // 
 // STD focus 200kV 1.50818e+06
 // STD focus 80kV 1.2127e+06
-// aDD 100Kv 2024-12-13 mwf
-// Prevent 10k mag select at alpha1
+// ADD 100Kv 2024-12-13 mwf
+// Prevent 10k mag select at alpha1 2024-12-19 MWF
+//
+// Contributors - MWF, BLY, KLYF, ICZ
 
 void SetImMode(){
 	string Edna = EMGetImagingOpticsMode()

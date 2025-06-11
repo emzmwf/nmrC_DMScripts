@@ -11,7 +11,7 @@ Tecnai Biotwin with Gatan Orius
 
 Descriptions:
 
-## HRTEM Orientation Map Angle and lengt h##
+## HRTEM Orientation Map Angle and length ##
 - uses a filtered FFT to identify and map orientations via peak intensity
 Viridis.dm3 and twilight_shifted.dm3 are colormaps derived from the Matplotlib colormaps of the same names that can be installed into GMS and used with this script. 
 

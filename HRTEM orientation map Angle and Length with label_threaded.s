@@ -7,6 +7,7 @@ Added orientation indicator in bottom right of angle map
 To use colortables, add to the Gatan colortables folder
 Usually found at 
 C:\Users\<username>\AppData\Local\Gatan\ColorTables
+note - best with cyclic colortables
 */ 
 
 

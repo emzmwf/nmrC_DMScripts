@@ -18,7 +18,7 @@ Viridis.dm3 and twilight_shifted.dm3 are colormaps derived from the Matplotlib c
 ## AutoFocus_insitu ##
 - tested on OneView and K3 in-situ cameras. Automated focus change and report, user needs to activate in-situ acquisition in advance of running script as that functionality isn't included in the dm script language as yet (as far as I'm aware)
 
-- ## DefocusSeriesScript.s ##
+## DefocusSeriesScript.s ##
 - Acquisition of a series of images at varying focus, note that the raw units to nm calibration for focus needs to be determined beforehand.
 - See also Stack_2_FFTstack.s - to generate a stack of FFTs from the output of this script. 
 

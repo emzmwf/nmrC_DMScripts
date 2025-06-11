@@ -96,6 +96,8 @@ GetNumber("Amount of raw units to change first step", BrightChange, BrightChange
 number step = BrightChange
 number oldint = 99999999
 
+//documentwindow win
+
 s = BVal
 while (s <=65535)
 {
@@ -111,6 +113,8 @@ while (s <=65535)
  	//Get mean from image
 	number immean = mean(IMG)
 	Result("\n"+imname+": "+immean)	
+ 	//win = NewScriptWindow("Intensities", 100, 100, 600, 900 )
+	//win.EditorWindowAddText( "\n"+imname+": "+immean )
 	s = s+step
 	step = round(step*1.1)
 	if (immean <2)
@@ -135,6 +139,8 @@ end += "Beam has been blanked."
 
 //To do - plot brightness vs intensity for images
 //To do - automatically export into file:
+//win.WindowSave(2)  
+
 //To do - brightness and intensity values as two column text
 //To do - with exposure time and calibration gain factor used (will use ## tag format)
 

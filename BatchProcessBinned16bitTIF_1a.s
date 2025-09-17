@@ -6,6 +6,14 @@
 // 12 June 2023 - add type 2 for OneView dm4 images
 // still can't hide opened images despite trying in multiple ways...
 
+// function convert FFT to real4 type
+void ConvertToType2(image img)
+{
+	image img2 = modulus(img)
+	image img3 = log(img2)
+ 	DeleteImage(img)
+	img = img3
+}
 
 //Function clones image, bins down to a size between 1024 and 2048, copies calibrations, saves display as jpg
 void PerformBatchAction( image img, string fname )
@@ -227,6 +235,10 @@ void BatchProcessList( TagGroup fileList , string name )
 							PerformBatchAction( img, str )                                                
 							HideImage(img)
 							}
+						if (Tp == 3){
+							ConvertToType2(img)
+							PerformBatchAction( img, str ) 
+							}	   
 						else {
 							Result("\n file found of type ")
 							Result(Tp)
@@ -259,3 +271,4 @@ void BatchProcessFilesInFolder( number includeSubFolders )
 }
  
 BatchProcessFilesInFolder( 1 )
+

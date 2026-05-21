@@ -1,7 +1,7 @@
 // Script to cut out the ROI in the foremost image and
 // create a new image from it.
 
-// D. R. G. Mitchell, adminnospam@dmscripting.com (remove the nospam to make this email address work)
+// Adapted from D. R. G. Mitchell
 
 // v1.3 20241218 - copy tags also, add tag saying name of original file
 // TO DO - scale bar is fine when this is run as a separate script, but size is massive when run from menu. Investigate and fix.
@@ -36,8 +36,6 @@ TagGroupSetTagAsString(targettags, tagPath, sourcename)
 
 okdialog("All tags copied from '"+sourcename+"' to '"+targetname+"'.")
 }
-
-
 
 // Get info from foremost image
 
@@ -83,13 +81,11 @@ image cropped=front[]
 showimage(cropped)
 
 
-// Calibrate and name the new image
+// Calibrate and name the new image. But we don't need to shorten the name.
 imagecopycalibrationfrom(cropped, front)
 imagedisplay cropdisp=cropped.imagegetimagedisplay(0)
 cropdisp.applydatabar()
-number substringlength=len(imgname)
-if(substringlength>9) substringlength=9
-string shortname=left(imgname, substringlength)+" Extracted ROI"
+string shortname=imgname+"_Extracted ROI"
 setname(cropped, shortname)
 
 //Copy tags
